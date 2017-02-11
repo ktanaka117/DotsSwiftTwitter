@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1212" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Timeline View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="TimelineViewController" customModule="DotsSwiftTwitter" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="209" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="EA3-mb-tEg">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TimelineTableViewCell" rowHeight="200" id="Zs8-mP-4tw" customClass="TimelineTableViewCell" customModule="DotsSwiftTwitter" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="200"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Zs8-mP-4tw" id="bpo-rs-Og9">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="199"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ekC-0v-Sls">
+                                                    <rect key="frame" x="8" y="8" width="50" height="50"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="50" id="LXW-Fs-uH8"/>
+                                                        <constraint firstAttribute="width" constant="50" id="NK3-zc-S1x"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ダンボー田中" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rCr-hk-0Tv">
+                                                    <rect key="frame" x="66" y="8" width="301" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="@ktanaka117" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NK0-ma-r80">
+                                                    <rect key="frame" x="66" y="37" width="301" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="SwiftでTwitterクライアント作って今日も一日頑張るぞいあああああああああああああああああああああああああああああああああ" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DPG-Qq-hyS">
+                                                    <rect key="frame" x="66" y="66" width="301" height="125.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="rCr-hk-0Tv" secondAttribute="trailing" constant="8" id="75l-ng-jXX"/>
+                                                <constraint firstItem="DPG-Qq-hyS" firstAttribute="top" secondItem="NK0-ma-r80" secondAttribute="bottom" constant="8" id="7Mx-ee-3l7"/>
+                                                <constraint firstItem="NK0-ma-r80" firstAttribute="leading" secondItem="ekC-0v-Sls" secondAttribute="trailing" constant="8" id="GSl-s9-Zey"/>
+                                                <constraint firstAttribute="bottom" secondItem="DPG-Qq-hyS" secondAttribute="bottom" constant="8" id="ODy-By-JRu"/>
+                                                <constraint firstItem="NK0-ma-r80" firstAttribute="top" secondItem="rCr-hk-0Tv" secondAttribute="bottom" constant="8" id="Orv-1j-Cst"/>
+                                                <constraint firstAttribute="trailing" secondItem="DPG-Qq-hyS" secondAttribute="trailing" constant="8" id="Tb1-5b-Gn6"/>
+                                                <constraint firstItem="DPG-Qq-hyS" firstAttribute="leading" secondItem="NK0-ma-r80" secondAttribute="leading" id="ak7-4D-7LP"/>
+                                                <constraint firstItem="ekC-0v-Sls" firstAttribute="top" secondItem="bpo-rs-Og9" secondAttribute="top" constant="8" id="cF9-xO-hd7"/>
+                                                <constraint firstAttribute="trailing" secondItem="NK0-ma-r80" secondAttribute="trailing" constant="8" id="ePU-vc-nmQ"/>
+                                                <constraint firstItem="ekC-0v-Sls" firstAttribute="leading" secondItem="bpo-rs-Og9" secondAttribute="leading" constant="8" id="k2l-aL-SRm"/>
+                                                <constraint firstItem="rCr-hk-0Tv" firstAttribute="top" secondItem="bpo-rs-Og9" secondAttribute="top" constant="8" id="sey-5s-kXR"/>
+                                                <constraint firstItem="rCr-hk-0Tv" firstAttribute="leading" secondItem="ekC-0v-Sls" secondAttribute="trailing" constant="8" id="vBQ-xM-rMU"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="contentLabel" destination="DPG-Qq-hyS" id="Fjr-ax-DD1"/>
+                                            <outlet property="iconImageView" destination="ekC-0v-Sls" id="B7N-Jd-Di9"/>
+                                            <outlet property="nameLabel" destination="rCr-hk-0Tv" id="kXo-Qa-zYd"/>
+                                            <outlet property="screenNameLabel" destination="NK0-ma-r80" id="cdj-mH-oIx"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="N9D-Tt-SJZ"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="U4m-7k-aSz"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="EA3-mb-tEg" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="bBJ-7D-3fD"/>
+                            <constraint firstItem="EA3-mb-tEg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="iDJ-Df-P00"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="EA3-mb-tEg" secondAttribute="bottom" id="lYX-Ld-Xi9"/>
+                            <constraint firstAttribute="trailing" secondItem="EA3-mb-tEg" secondAttribute="trailing" id="oy7-Yj-x7Q"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="EA3-mb-tEg" id="QdY-od-Xqk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="100" y="38.23088455772114"/>
+        </scene>
+    </scenes>
+</document>

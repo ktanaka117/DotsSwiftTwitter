@@ -8,20 +8,34 @@
 
 /* Begin PBXBuildFile section */
 		29438DD31E4F07FB004A22EF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29438DD21E4F07FB004A22EF /* AppDelegate.swift */; };
-		29438DD51E4F07FB004A22EF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29438DD41E4F07FB004A22EF /* ViewController.swift */; };
+		29438DD51E4F07FB004A22EF /* TimelineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29438DD41E4F07FB004A22EF /* TimelineViewController.swift */; };
 		29438DD81E4F07FB004A22EF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29438DD61E4F07FB004A22EF /* Main.storyboard */; };
 		29438DDA1E4F07FB004A22EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 29438DD91E4F07FB004A22EF /* Assets.xcassets */; };
 		29438DDD1E4F07FB004A22EF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29438DDB1E4F07FB004A22EF /* LaunchScreen.storyboard */; };
+		29438DED1E4F0D5F004A22EF /* Tweet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29438DE91E4F0D5F004A22EF /* Tweet.swift */; };
+		29438DEE1E4F0D5F004A22EF /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29438DEA1E4F0D5F004A22EF /* User.swift */; };
+		29438DEF1E4F0D5F004A22EF /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29438DEB1E4F0D5F004A22EF /* Account.swift */; };
+		29438DFD1E4F5461004A22EF /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29438DFC1E4F5461004A22EF /* NetworkManager.swift */; };
+		29438DFF1E4F56E5004A22EF /* LoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29438DFE1E4F56E5004A22EF /* LoginManager.swift */; };
+		29438E021E4F576B004A22EF /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29438E011E4F576B004A22EF /* Errors.swift */; };
+		29438E041E4F64DE004A22EF /* TimelineTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29438E031E4F64DE004A22EF /* TimelineTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		29438DCF1E4F07FB004A22EF /* DotsSwiftTwitter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DotsSwiftTwitter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		29438DD21E4F07FB004A22EF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		29438DD41E4F07FB004A22EF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		29438DD41E4F07FB004A22EF /* TimelineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineViewController.swift; sourceTree = "<group>"; };
 		29438DD71E4F07FB004A22EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		29438DD91E4F07FB004A22EF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		29438DDC1E4F07FB004A22EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		29438DDE1E4F07FB004A22EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		29438DE91E4F0D5F004A22EF /* Tweet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tweet.swift; sourceTree = "<group>"; };
+		29438DEA1E4F0D5F004A22EF /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		29438DEB1E4F0D5F004A22EF /* Account.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
+		29438DFC1E4F5461004A22EF /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		29438DFE1E4F56E5004A22EF /* LoginManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginManager.swift; sourceTree = "<group>"; };
+		29438E011E4F576B004A22EF /* Errors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Errors.swift; path = Errors.swift; sourceTree = "<group>"; };
+		29438E031E4F64DE004A22EF /* TimelineTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TimelineTableViewCell.swift; path = TimelineTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +68,79 @@
 		29438DD11E4F07FB004A22EF /* DotsSwiftTwitter */ = {
 			isa = PBXGroup;
 			children = (
+				29438DE61E4F0A10004A22EF /* Controller */,
+				29438DE41E4F09F3004A22EF /* Model */,
+				29438DE71E4F0A1B004A22EF /* Resource */,
+				29438DE51E4F0A09004A22EF /* View */,
 				29438DD21E4F07FB004A22EF /* AppDelegate.swift */,
-				29438DD41E4F07FB004A22EF /* ViewController.swift */,
-				29438DD61E4F07FB004A22EF /* Main.storyboard */,
-				29438DD91E4F07FB004A22EF /* Assets.xcassets */,
-				29438DDB1E4F07FB004A22EF /* LaunchScreen.storyboard */,
 				29438DDE1E4F07FB004A22EF /* Info.plist */,
 			);
 			path = DotsSwiftTwitter;
+			sourceTree = "<group>";
+		};
+		29438DE41E4F09F3004A22EF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				29438DFA1E4F0E3D004A22EF /* DataModel */,
+				29438E001E4F5734004A22EF /* Error */,
+				29438DFB1E4F0E48004A22EF /* Manager */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		29438DE51E4F0A09004A22EF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				29438E031E4F64DE004A22EF /* TimelineTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		29438DE61E4F0A10004A22EF /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				29438DD41E4F07FB004A22EF /* TimelineViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		29438DE71E4F0A1B004A22EF /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				29438DD91E4F07FB004A22EF /* Assets.xcassets */,
+				29438DDB1E4F07FB004A22EF /* LaunchScreen.storyboard */,
+				29438DD61E4F07FB004A22EF /* Main.storyboard */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		29438DFA1E4F0E3D004A22EF /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+				29438DEB1E4F0D5F004A22EF /* Account.swift */,
+				29438DE91E4F0D5F004A22EF /* Tweet.swift */,
+				29438DEA1E4F0D5F004A22EF /* User.swift */,
+			);
+			path = DataModel;
+			sourceTree = "<group>";
+		};
+		29438DFB1E4F0E48004A22EF /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				29438DFE1E4F56E5004A22EF /* LoginManager.swift */,
+				29438DFC1E4F5461004A22EF /* NetworkManager.swift */,
+			);
+			name = Manager;
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		29438E001E4F5734004A22EF /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				29438E011E4F576B004A22EF /* Errors.swift */,
+			);
+			name = Error;
+			path = Error;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,8 +215,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				29438DD51E4F07FB004A22EF /* ViewController.swift in Sources */,
+				29438DFD1E4F5461004A22EF /* NetworkManager.swift in Sources */,
+				29438E041E4F64DE004A22EF /* TimelineTableViewCell.swift in Sources */,
+				29438DD51E4F07FB004A22EF /* TimelineViewController.swift in Sources */,
+				29438DFF1E4F56E5004A22EF /* LoginManager.swift in Sources */,
 				29438DD31E4F07FB004A22EF /* AppDelegate.swift in Sources */,
+				29438E021E4F576B004A22EF /* Errors.swift in Sources */,
+				29438DEE1E4F0D5F004A22EF /* User.swift in Sources */,
+				29438DED1E4F0D5F004A22EF /* Tweet.swift in Sources */,
+				29438DEF1E4F0D5F004A22EF /* Account.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -150,6 +236,7 @@
 				29438DD71E4F07FB004A22EF /* Base */,
 			);
 			name = Main.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 		29438DDB1E4F07FB004A22EF /* LaunchScreen.storyboard */ = {
@@ -158,6 +245,7 @@
 				29438DDC1E4F07FB004A22EF /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -297,6 +385,7 @@
 				29438DE31E4F07FB004A22EF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
