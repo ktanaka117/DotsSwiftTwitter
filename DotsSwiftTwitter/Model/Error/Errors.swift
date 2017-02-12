@@ -13,3 +13,8 @@ enum LoginError: Error {
     case notGranted
     case other(Error)
 }
+
+enum JSONDecodeError: Error {
+    case invalidFormat(json: Any)
+    case missingValue(key: String, actualValue: Any?)
+}
