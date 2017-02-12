@@ -22,6 +22,19 @@ class TimelineTableViewCell: UITableViewCell {
     }
     
     func fill(with tweet: Tweet) {
+        
+        let downloadTask = URLSession.shared.dataTask(with: URL(string: tweet.user.profileImageURL)!) { [weak self] data, response, error in
+            if let error = error {
+                print(error)
+                return
+            }
+            
+            DispatchQueue.main.async {
+                self?.iconImageView.image = UIImage(data: data!)
+            }
+        }
+        downloadTask.resume()
+        
         nameLabel.text = tweet.user.name
         screenNameLabel.text = tweet.user.screenName
         contentLabel.text = tweet.text
