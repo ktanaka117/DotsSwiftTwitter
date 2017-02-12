@@ -14,7 +14,9 @@ class TimelineViewController: UIViewController {
     
     var tweets: [Tweet]? = nil {
         didSet {
-            tableView.reloadData()
+            DispatchQueue.main.async { [weak self] in
+                self?.tableView.reloadData()
+            }
         }
     }
     
