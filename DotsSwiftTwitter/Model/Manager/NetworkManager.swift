@@ -10,7 +10,7 @@ import Social
 
 struct NetworkManager {
     
-    func getTimeline() {
+    func getTimeline(handler: @escaping (Data?, Error?) -> ()) {
         let request = SLRequest(
             forServiceType: SLServiceTypeTwitter,
             requestMethod: .GET,
@@ -21,15 +21,12 @@ struct NetworkManager {
         request?.account = Account.twitterAccount
         
         request?.perform { data, response, error in
-            if error != nil {
-                print("Error")
-            } else {
-                let json = try! JSONSerialization.jsonObject(
-                    with: data!,
-                    options: .allowFragments
-                )
-                print(json)
+            if let error = error {
+                handler(nil, error)
+                return
             }
+            
+            handler(data, error)
         }
     }
     
