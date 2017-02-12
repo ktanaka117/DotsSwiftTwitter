@@ -42,29 +42,29 @@
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ダンボー田中" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rCr-hk-0Tv">
                                                     <rect key="frame" x="66" y="8" width="301" height="19.5"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="@ktanaka117" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NK0-ma-r80">
-                                                    <rect key="frame" x="66" y="31.5" width="301" height="14.5"/>
+                                                    <rect key="frame" x="66" y="27.5" width="301" height="14.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="SwiftでTwitterクライアント作って今日も一日頑張るぞいあああああああああああああああああああああああああああああああああ" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DPG-Qq-hyS">
-                                                    <rect key="frame" x="66" y="62" width="301" height="129.5"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <rect key="frame" x="66" y="50" width="301" height="141.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="rCr-hk-0Tv" secondAttribute="trailing" constant="8" id="75l-ng-jXX"/>
-                                                <constraint firstItem="DPG-Qq-hyS" firstAttribute="top" secondItem="NK0-ma-r80" secondAttribute="bottom" constant="16" id="7Mx-ee-3l7"/>
+                                                <constraint firstItem="DPG-Qq-hyS" firstAttribute="top" secondItem="NK0-ma-r80" secondAttribute="bottom" constant="8" id="7Mx-ee-3l7"/>
                                                 <constraint firstItem="NK0-ma-r80" firstAttribute="leading" secondItem="ekC-0v-Sls" secondAttribute="trailing" constant="8" id="GSl-s9-Zey"/>
                                                 <constraint firstAttribute="bottom" secondItem="DPG-Qq-hyS" secondAttribute="bottom" constant="8" id="ODy-By-JRu"/>
-                                                <constraint firstItem="NK0-ma-r80" firstAttribute="top" secondItem="rCr-hk-0Tv" secondAttribute="bottom" constant="4" id="Orv-1j-Cst"/>
+                                                <constraint firstItem="NK0-ma-r80" firstAttribute="top" secondItem="rCr-hk-0Tv" secondAttribute="bottom" id="Orv-1j-Cst"/>
                                                 <constraint firstAttribute="trailing" secondItem="DPG-Qq-hyS" secondAttribute="trailing" constant="8" id="Tb1-5b-Gn6"/>
                                                 <constraint firstItem="DPG-Qq-hyS" firstAttribute="leading" secondItem="NK0-ma-r80" secondAttribute="leading" id="ak7-4D-7LP"/>
                                                 <constraint firstItem="ekC-0v-Sls" firstAttribute="top" secondItem="bpo-rs-Og9" secondAttribute="top" constant="8" id="cF9-xO-hd7"/>
