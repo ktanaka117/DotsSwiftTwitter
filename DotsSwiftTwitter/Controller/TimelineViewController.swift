@@ -23,7 +23,11 @@ class TimelineViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        LoginCommunicator().login() { _ in
+        LoginCommunicator().login() { [weak self]loginError in
+            if let loginError = loginError {
+                self?.errorHandle(withLoginError: loginError)
+                return
+            }
             TwitterCommunicator().getTimeline() { [weak self] data, error in
                 if let _ = error { return }
                 
@@ -33,6 +37,18 @@ class TimelineViewController: UIViewController {
         }
     }
 
+}
+
+extension TimelineViewController {
+    
+    func errorHandle(withLoginError loginError: LoginError) {
+        let alertController = UIAlertController(loginError: loginError)
+        alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        DispatchQueue.main.async {
+            self.present(alertController, animated: true, completion: nil)
+        }
+    }
+    
 }
 
 extension TimelineViewController: UITableViewDelegate {

@@ -24,7 +24,7 @@ struct LoginCommunicator {
         store.requestAccessToAccounts(with: type, options: nil) { granted, error in
             
             // 承認されなかった場合
-            if !granted {
+            guard granted else {
                 handler(LoginError.notGranted)
                 return
             }
