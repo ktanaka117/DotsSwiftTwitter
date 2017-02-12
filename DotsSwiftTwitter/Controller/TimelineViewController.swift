@@ -21,7 +21,7 @@ class TimelineViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        try! LoginCommunicator().login() {
+        LoginCommunicator().login() { _ in
             TwitterCommunicator().getTimeline() { [weak self] data, error in
                 if let _ = error { return }
                 

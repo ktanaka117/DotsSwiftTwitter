@@ -11,10 +11,11 @@ import Accounts
 
 struct LoginCommunicator {
     
-    func login(completion: @escaping () -> ()) throws {
+    func login(handler: @escaping (LoginError?) -> ()) {
         
         if !SLComposeViewController.isAvailable(forServiceType: SLServiceTypeTwitter) {
-            throw LoginError.twitterNotAvailable
+            handler(LoginError.twitterNotAvailable)
+            return
         }
         
         let store = ACAccountStore()
@@ -24,13 +25,13 @@ struct LoginCommunicator {
             
             // 承認されなかった場合
             if !granted {
-//                throw LoginError.notGranted
+                handler(LoginError.notGranted)
                 return
             }
             
             // 何らかのエラーがあった場合
             if let error = error {
-//                LoginError.other(error)
+                handler(LoginError.other(error))
                 return
             }
             
@@ -38,7 +39,7 @@ struct LoginCommunicator {
             // FIXME: アカウント選択させよう
             if let account = accounts?.first as? ACAccount {
                 Account.twitterAccount = account
-                completion()
+                handler(nil)
             }
         }
         
