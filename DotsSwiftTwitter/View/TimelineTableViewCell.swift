@@ -20,6 +20,7 @@ class TimelineTableViewCell: UITableViewCell {
         
         iconImageView.image = nil
         iconImageView.layer.cornerRadius = 8.0
+        iconImageView.layer.masksToBounds = true
     }
     
     func fill(with tweet: Tweet) {
