@@ -15,4 +15,16 @@ class TimelineTableViewCell: UITableViewCell {
     @IBOutlet weak var screenNameLabel: UILabel!
     @IBOutlet weak var contentLabel: UILabel!
     
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+        iconImageView.layer.cornerRadius = 8.0
+    }
+    
+    func fill(with tweet: Tweet) {
+        nameLabel.text = tweet.user.name
+        screenNameLabel.text = tweet.user.screenName
+        contentLabel.text = tweet.text
+    }
+    
 }
