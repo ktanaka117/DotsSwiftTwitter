@@ -18,6 +18,7 @@ class TimelineTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
+        iconImageView.image = nil
         iconImageView.layer.cornerRadius = 8.0
     }
     
