@@ -12,13 +12,22 @@ class TimelineViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
-    var tweets: [Tweet]?
+    var tweets: [Tweet]? = nil {
+        didSet {
+            tableView.reloadData()
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         try! LoginManager().login() {
-            NetworkManager().getTimeline()
+            NetworkManager().getTimeline() { [weak self] data, error in
+                if let _ = error { return }
+                
+                let tweetsParser = TweetsParser()
+                self?.tweets = try! tweetsParser.parse(json: data!)
+            }
         }
     }
 
@@ -43,14 +52,16 @@ extension TimelineViewController: UITableViewDelegate {
 extension TimelineViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return tweets?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "TimelineTableViewCell") as! TimelineTableViewCell!
+        let cell = tableView.dequeueReusableCell(withIdentifier: "TimelineTableViewCell") as! TimelineTableViewCell
         
-        return cell!
+        cell.fill(with: tweets![indexPath.row])
+        
+        return cell
     }
     
 }
