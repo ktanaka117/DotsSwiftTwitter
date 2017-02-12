@@ -22,6 +22,7 @@
 		29438E141E50A79C004A22EF /* TweetsParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29438E131E50A79C004A22EF /* TweetsParser.swift */; };
 		29438E161E50BE71004A22EF /* LoginError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29438E151E50BE71004A22EF /* LoginError.swift */; };
 		29438E181E50BE84004A22EF /* JSONDecodeError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29438E171E50BE84004A22EF /* JSONDecodeError.swift */; };
+		DB0418C11E50C3DC00ACC04D /* UIAlertControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0418C01E50C3DC00ACC04D /* UIAlertControllerExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		29438E131E50A79C004A22EF /* TweetsParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TweetsParser.swift; sourceTree = "<group>"; };
 		29438E151E50BE71004A22EF /* LoginError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginError.swift; sourceTree = "<group>"; };
 		29438E171E50BE84004A22EF /* JSONDecodeError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONDecodeError.swift; sourceTree = "<group>"; };
+		DB0418C01E50C3DC00ACC04D /* UIAlertControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIAlertControllerExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 		29438DD11E4F07FB004A22EF /* DotsSwiftTwitter */ = {
 			isa = PBXGroup;
 			children = (
+				DB0418BF1E50C3CB00ACC04D /* Extension */,
 				29438DE61E4F0A10004A22EF /* Controller */,
 				29438DE41E4F09F3004A22EF /* Model */,
 				29438DE71E4F0A1B004A22EF /* Resource */,
@@ -148,6 +151,14 @@
 				29438E171E50BE84004A22EF /* JSONDecodeError.swift */,
 			);
 			path = Error;
+			sourceTree = "<group>";
+		};
+		DB0418BF1E50C3CB00ACC04D /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				DB0418C01E50C3DC00ACC04D /* UIAlertControllerExtension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,6 +242,7 @@
 				29438DFF1E4F56E5004A22EF /* LoginCommunicator.swift in Sources */,
 				29438E141E50A79C004A22EF /* TweetsParser.swift in Sources */,
 				29438DD31E4F07FB004A22EF /* AppDelegate.swift in Sources */,
+				DB0418C11E50C3DC00ACC04D /* UIAlertControllerExtension.swift in Sources */,
 				29438DEE1E4F0D5F004A22EF /* User.swift in Sources */,
 				29438DED1E4F0D5F004A22EF /* Tweet.swift in Sources */,
 				29438DEF1E4F0D5F004A22EF /* Account.swift in Sources */,
