@@ -8,7 +8,7 @@
 
 import Social
 
-struct NetworkManager {
+struct TwitterCommunicator {
     
     func getTimeline(handler: @escaping (Data?, Error?) -> ()) {
         let request = SLRequest(

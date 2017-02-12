@@ -15,8 +15,8 @@
 		29438DED1E4F0D5F004A22EF /* Tweet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29438DE91E4F0D5F004A22EF /* Tweet.swift */; };
 		29438DEE1E4F0D5F004A22EF /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29438DEA1E4F0D5F004A22EF /* User.swift */; };
 		29438DEF1E4F0D5F004A22EF /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29438DEB1E4F0D5F004A22EF /* Account.swift */; };
-		29438DFD1E4F5461004A22EF /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29438DFC1E4F5461004A22EF /* NetworkManager.swift */; };
-		29438DFF1E4F56E5004A22EF /* LoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29438DFE1E4F56E5004A22EF /* LoginManager.swift */; };
+		29438DFD1E4F5461004A22EF /* TwitterCommunicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29438DFC1E4F5461004A22EF /* TwitterCommunicator.swift */; };
+		29438DFF1E4F56E5004A22EF /* LoginCommunicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29438DFE1E4F56E5004A22EF /* LoginCommunicator.swift */; };
 		29438E021E4F576B004A22EF /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29438E011E4F576B004A22EF /* Errors.swift */; };
 		29438E041E4F64DE004A22EF /* TimelineTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29438E031E4F64DE004A22EF /* TimelineTableViewCell.swift */; };
 		29438E121E509981004A22EF /* JSONDecodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29438E111E509981004A22EF /* JSONDecodable.swift */; };
@@ -34,8 +34,8 @@
 		29438DE91E4F0D5F004A22EF /* Tweet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tweet.swift; sourceTree = "<group>"; };
 		29438DEA1E4F0D5F004A22EF /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		29438DEB1E4F0D5F004A22EF /* Account.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
-		29438DFC1E4F5461004A22EF /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
-		29438DFE1E4F56E5004A22EF /* LoginManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginManager.swift; sourceTree = "<group>"; };
+		29438DFC1E4F5461004A22EF /* TwitterCommunicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterCommunicator.swift; sourceTree = "<group>"; };
+		29438DFE1E4F56E5004A22EF /* LoginCommunicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginCommunicator.swift; sourceTree = "<group>"; };
 		29438E011E4F576B004A22EF /* Errors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
 		29438E031E4F64DE004A22EF /* TimelineTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineTableViewCell.swift; sourceTree = "<group>"; };
 		29438E111E509981004A22EF /* JSONDecodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONDecodable.swift; sourceTree = "<group>"; };
@@ -85,9 +85,9 @@
 		29438DE41E4F09F3004A22EF /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				29438DFB1E4F0E48004A22EF /* Communicator */,
 				29438DFA1E4F0E3D004A22EF /* DataModel */,
 				29438E001E4F5734004A22EF /* Error */,
-				29438DFB1E4F0E48004A22EF /* Manager */,
 				29438E131E50A79C004A22EF /* TweetsParser.swift */,
 			);
 			path = Model;
@@ -122,21 +122,22 @@
 		29438DFA1E4F0E3D004A22EF /* DataModel */ = {
 			isa = PBXGroup;
 			children = (
-				29438E111E509981004A22EF /* JSONDecodable.swift */,
 				29438DEB1E4F0D5F004A22EF /* Account.swift */,
+				29438E111E509981004A22EF /* JSONDecodable.swift */,
 				29438DE91E4F0D5F004A22EF /* Tweet.swift */,
 				29438DEA1E4F0D5F004A22EF /* User.swift */,
 			);
 			path = DataModel;
 			sourceTree = "<group>";
 		};
-		29438DFB1E4F0E48004A22EF /* Manager */ = {
+		29438DFB1E4F0E48004A22EF /* Communicator */ = {
 			isa = PBXGroup;
 			children = (
-				29438DFE1E4F56E5004A22EF /* LoginManager.swift */,
-				29438DFC1E4F5461004A22EF /* NetworkManager.swift */,
+				29438DFE1E4F56E5004A22EF /* LoginCommunicator.swift */,
+				29438DFC1E4F5461004A22EF /* TwitterCommunicator.swift */,
 			);
-			path = Manager;
+			name = Communicator;
+			path = Communicator;
 			sourceTree = "<group>";
 		};
 		29438E001E4F5734004A22EF /* Error */ = {
@@ -219,11 +220,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				29438DFD1E4F5461004A22EF /* NetworkManager.swift in Sources */,
+				29438DFD1E4F5461004A22EF /* TwitterCommunicator.swift in Sources */,
 				29438E121E509981004A22EF /* JSONDecodable.swift in Sources */,
 				29438E041E4F64DE004A22EF /* TimelineTableViewCell.swift in Sources */,
 				29438DD51E4F07FB004A22EF /* TimelineViewController.swift in Sources */,
-				29438DFF1E4F56E5004A22EF /* LoginManager.swift in Sources */,
+				29438DFF1E4F56E5004A22EF /* LoginCommunicator.swift in Sources */,
 				29438E141E50A79C004A22EF /* TweetsParser.swift in Sources */,
 				29438DD31E4F07FB004A22EF /* AppDelegate.swift in Sources */,
 				29438E021E4F576B004A22EF /* Errors.swift in Sources */,

@@ -21,8 +21,8 @@ class TimelineViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        try! LoginManager().login() {
-            NetworkManager().getTimeline() { [weak self] data, error in
+        try! LoginCommunicator().login() {
+            TwitterCommunicator().getTimeline() { [weak self] data, error in
                 if let _ = error { return }
                 
                 let tweetsParser = TweetsParser()

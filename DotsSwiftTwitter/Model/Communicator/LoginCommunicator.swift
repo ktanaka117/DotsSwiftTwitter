@@ -9,7 +9,7 @@
 import Social
 import Accounts
 
-struct LoginManager {
+struct LoginCommunicator {
     
     func login(completion: @escaping () -> ()) throws {
         
