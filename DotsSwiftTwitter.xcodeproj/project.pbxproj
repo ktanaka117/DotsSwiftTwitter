@@ -20,6 +20,7 @@
 		29438E021E4F576B004A22EF /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29438E011E4F576B004A22EF /* Errors.swift */; };
 		29438E041E4F64DE004A22EF /* TimelineTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29438E031E4F64DE004A22EF /* TimelineTableViewCell.swift */; };
 		29438E121E509981004A22EF /* JSONDecodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29438E111E509981004A22EF /* JSONDecodable.swift */; };
+		29438E141E50A79C004A22EF /* TweetsParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29438E131E50A79C004A22EF /* TweetsParser.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		29438E011E4F576B004A22EF /* Errors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
 		29438E031E4F64DE004A22EF /* TimelineTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineTableViewCell.swift; sourceTree = "<group>"; };
 		29438E111E509981004A22EF /* JSONDecodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONDecodable.swift; sourceTree = "<group>"; };
+		29438E131E50A79C004A22EF /* TweetsParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TweetsParser.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 				29438DFA1E4F0E3D004A22EF /* DataModel */,
 				29438E001E4F5734004A22EF /* Error */,
 				29438DFB1E4F0E48004A22EF /* Manager */,
+				29438E131E50A79C004A22EF /* TweetsParser.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -221,6 +224,7 @@
 				29438E041E4F64DE004A22EF /* TimelineTableViewCell.swift in Sources */,
 				29438DD51E4F07FB004A22EF /* TimelineViewController.swift in Sources */,
 				29438DFF1E4F56E5004A22EF /* LoginManager.swift in Sources */,
+				29438E141E50A79C004A22EF /* TweetsParser.swift in Sources */,
 				29438DD31E4F07FB004A22EF /* AppDelegate.swift in Sources */,
 				29438E021E4F576B004A22EF /* Errors.swift in Sources */,
 				29438DEE1E4F0D5F004A22EF /* User.swift in Sources */,
