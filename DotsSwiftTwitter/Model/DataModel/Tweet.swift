@@ -19,8 +19,8 @@ struct Tweet: JSONDecodable {
             throw JSONDecodeError.invalidFormat(json: json)
         }
         
-        guard let id = dictionary["id"] as? String else {
-            throw JSONDecodeError.missingValue(key: "id", actualValue: dictionary["id"])
+        guard let id = dictionary["id_str"] as? String else {
+            throw JSONDecodeError.missingValue(key: "id_str", actualValue: dictionary["id_str"])
         }
         
         guard let text = dictionary["text"] as? String else {

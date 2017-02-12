@@ -26,20 +26,20 @@ struct User: JSONDecodable {
             throw JSONDecodeError.invalidFormat(json: json)
         }
         
-        guard let id = dictionary["id"] as? String else {
-            throw JSONDecodeError.missingValue(key: "id", actualValue: dictionary["id"])
+        guard let id = dictionary["id_str"] as? String else {
+            throw JSONDecodeError.missingValue(key: "id_str", actualValue: dictionary["id_str"])
         }
         
-        guard let screenName = dictionary["screenName"] as? String else {
-            throw JSONDecodeError.missingValue(key: "screenName", actualValue: dictionary["screenName"])
+        guard let screenName = dictionary["screen_name"] as? String else {
+            throw JSONDecodeError.missingValue(key: "screen_name", actualValue: dictionary["screen_name"])
         }
         
         guard let name = dictionary["name"] as? String else {
             throw JSONDecodeError.missingValue(key: "name", actualValue: dictionary["name"])
         }
         
-        guard let profileImageURL = dictionary["profileImageURL"] as? String else {
-            throw JSONDecodeError.missingValue(key: "profileImageURL", actualValue: dictionary["profileImageURL"])
+        guard let profileImageURL = dictionary["profile_image_url_https"] as? String else {
+            throw JSONDecodeError.missingValue(key: "profile_image_url_https", actualValue: dictionary["profile_image_url_https"])
         }
         
         self.id = id
