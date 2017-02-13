@@ -17,7 +17,7 @@ struct TweetsParser {
                 options: .allowFragments
             )
             
-            guard let jsonArray = json as? [Any] else { return [] }
+            guard let jsonArray = json as? [Any] else { throw JSONSerializeError.failToSerialize }
             
             do {
                 return try jsonArray.map { try Tweet(json: $0) }
@@ -32,7 +32,7 @@ struct TweetsParser {
             throw JSONSerializeError.failToSerialize
         }
         
-        return []
+        throw JSONSerializeError.failToSerialize
     }
     
 }
