@@ -28,11 +28,14 @@ class TimelineViewController: UIViewController {
                 self?.errorHandle(withLoginError: loginError)
                 return
             }
+            
             TwitterCommunicator().getTimeline() { [weak self] data, error in
                 if let _ = error { return }
                 
-                let tweetsParser = TweetsParser()
-                self?.tweets = try! tweetsParser.parse(json: data!)
+                if let data = data {
+                    let tweetsParser = TweetsParser()
+                    self?.tweets = try! tweetsParser.parse(json: data)
+                }
             }
         }
     }
