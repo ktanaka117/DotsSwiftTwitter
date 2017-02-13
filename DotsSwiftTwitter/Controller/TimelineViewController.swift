@@ -34,7 +34,11 @@ class TimelineViewController: UIViewController {
                 
                 if let data = data {
                     let tweetsParser = TweetsParser()
-                    self?.tweets = try! tweetsParser.parse(json: data)
+                    do {
+                        self?.tweets = try tweetsParser.parse(json: data)
+                    } catch let error {
+                        print(error)
+                    }
                 }
             }
         }

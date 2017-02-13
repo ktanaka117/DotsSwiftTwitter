@@ -22,6 +22,7 @@
 		29438E141E50A79C004A22EF /* TweetsParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29438E131E50A79C004A22EF /* TweetsParser.swift */; };
 		29438E161E50BE71004A22EF /* LoginError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29438E151E50BE71004A22EF /* LoginError.swift */; };
 		29438E181E50BE84004A22EF /* JSONDecodeError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29438E171E50BE84004A22EF /* JSONDecodeError.swift */; };
+		29438E1C1E519AC3004A22EF /* JSONSerializeError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29438E1B1E519AC3004A22EF /* JSONSerializeError.swift */; };
 		DB0418C11E50C3DC00ACC04D /* UIAlertControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0418C01E50C3DC00ACC04D /* UIAlertControllerExtension.swift */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +44,7 @@
 		29438E131E50A79C004A22EF /* TweetsParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TweetsParser.swift; sourceTree = "<group>"; };
 		29438E151E50BE71004A22EF /* LoginError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginError.swift; sourceTree = "<group>"; };
 		29438E171E50BE84004A22EF /* JSONDecodeError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONDecodeError.swift; sourceTree = "<group>"; };
+		29438E1B1E519AC3004A22EF /* JSONSerializeError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONSerializeError.swift; sourceTree = "<group>"; };
 		DB0418C01E50C3DC00ACC04D /* UIAlertControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIAlertControllerExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -148,6 +150,7 @@
 			isa = PBXGroup;
 			children = (
 				29438E151E50BE71004A22EF /* LoginError.swift */,
+				29438E1B1E519AC3004A22EF /* JSONSerializeError.swift */,
 				29438E171E50BE84004A22EF /* JSONDecodeError.swift */,
 			);
 			path = Error;
@@ -242,6 +245,7 @@
 				29438DFF1E4F56E5004A22EF /* LoginCommunicator.swift in Sources */,
 				29438E141E50A79C004A22EF /* TweetsParser.swift in Sources */,
 				29438DD31E4F07FB004A22EF /* AppDelegate.swift in Sources */,
+				29438E1C1E519AC3004A22EF /* JSONSerializeError.swift in Sources */,
 				DB0418C11E50C3DC00ACC04D /* UIAlertControllerExtension.swift in Sources */,
 				29438DEE1E4F0D5F004A22EF /* User.swift in Sources */,
 				29438DED1E4F0D5F004A22EF /* Tweet.swift in Sources */,
