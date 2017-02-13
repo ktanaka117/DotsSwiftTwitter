@@ -22,6 +22,7 @@
 		29438E141E50A79C004A22EF /* TweetsParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29438E131E50A79C004A22EF /* TweetsParser.swift */; };
 		29438E161E50BE71004A22EF /* LoginError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29438E151E50BE71004A22EF /* LoginError.swift */; };
 		29438E181E50BE84004A22EF /* JSONDecodeError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29438E171E50BE84004A22EF /* JSONDecodeError.swift */; };
+		7F6588251E5173D700AC8A1C /* TwitterHttpError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6588241E5173D700AC8A1C /* TwitterHttpError.swift */; };
 		DB0418C11E50C3DC00ACC04D /* UIAlertControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0418C01E50C3DC00ACC04D /* UIAlertControllerExtension.swift */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +44,7 @@
 		29438E131E50A79C004A22EF /* TweetsParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TweetsParser.swift; sourceTree = "<group>"; };
 		29438E151E50BE71004A22EF /* LoginError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginError.swift; sourceTree = "<group>"; };
 		29438E171E50BE84004A22EF /* JSONDecodeError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONDecodeError.swift; sourceTree = "<group>"; };
+		7F6588241E5173D700AC8A1C /* TwitterHttpError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterHttpError.swift; sourceTree = "<group>"; };
 		DB0418C01E50C3DC00ACC04D /* UIAlertControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIAlertControllerExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -149,6 +151,7 @@
 			children = (
 				29438E151E50BE71004A22EF /* LoginError.swift */,
 				29438E171E50BE84004A22EF /* JSONDecodeError.swift */,
+				7F6588241E5173D700AC8A1C /* TwitterHttpError.swift */,
 			);
 			path = Error;
 			sourceTree = "<group>";
@@ -241,6 +244,7 @@
 				29438DD51E4F07FB004A22EF /* TimelineViewController.swift in Sources */,
 				29438DFF1E4F56E5004A22EF /* LoginCommunicator.swift in Sources */,
 				29438E141E50A79C004A22EF /* TweetsParser.swift in Sources */,
+				7F6588251E5173D700AC8A1C /* TwitterHttpError.swift in Sources */,
 				29438DD31E4F07FB004A22EF /* AppDelegate.swift in Sources */,
 				DB0418C11E50C3DC00ACC04D /* UIAlertControllerExtension.swift in Sources */,
 				29438DEE1E4F0D5F004A22EF /* User.swift in Sources */,

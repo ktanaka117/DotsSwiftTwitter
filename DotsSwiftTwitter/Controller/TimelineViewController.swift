@@ -23,12 +23,16 @@ class TimelineViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        LoginCommunicator().login() { [weak self]loginError in
+        LoginCommunicator().login() { [weak self] loginError in
             if let loginError = loginError {
-                self?.errorHandle(withLoginError: loginError)
+                self?.errorHandle(loginError)
                 return
             }
             TwitterCommunicator().getTimeline() { [weak self] data, error in
+                if let twitterHttpError = error as? TwitterHttpError {
+                    self?.errorHandle(twitterHttpError)
+                    return
+                }
                 if let _ = error { return }
                 
                 let tweetsParser = TweetsParser()
@@ -41,8 +45,16 @@ class TimelineViewController: UIViewController {
 
 extension TimelineViewController {
     
-    func errorHandle(withLoginError loginError: LoginError) {
+    func errorHandle(_ loginError: LoginError) {
         let alertController = UIAlertController(loginError: loginError)
+        alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        DispatchQueue.main.async {
+            self.present(alertController, animated: true, completion: nil)
+        }
+    }
+    
+    func errorHandle(_ twitterHttpError: TwitterHttpError) {
+        let alertController = UIAlertController(twitterHttpError: twitterHttpError)
         alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
         DispatchQueue.main.async {
             self.present(alertController, animated: true, completion: nil)

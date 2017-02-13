@@ -21,6 +21,10 @@ struct TwitterCommunicator {
         request?.account = Account.twitterAccount
         
         request?.perform { data, response, error in
+            if let twitterHttpError = TwitterHttpError(statusCode: response?.statusCode) {
+                handler(nil, twitterHttpError)
+                return
+            }
             if let error = error {
                 handler(nil, error)
                 return

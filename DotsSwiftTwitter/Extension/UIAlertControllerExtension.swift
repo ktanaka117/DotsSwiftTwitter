@@ -24,5 +24,9 @@ extension UIAlertController {
         self.init(title: "ログインに失敗しました", message: message, preferredStyle: .alert)
 
     }
+    
+    convenience init(twitterHttpError: TwitterHttpError) {
+        self.init(title: twitterHttpError.message, message: "", preferredStyle: .alert)
+    }
 
 }
