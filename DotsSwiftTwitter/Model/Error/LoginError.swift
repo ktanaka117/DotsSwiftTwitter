@@ -11,5 +11,5 @@ import Foundation
 enum LoginError: Error {
     case twitterNotAvailable
     case notGranted
-    case other(Error)
+    case other(error: Error)
 }
