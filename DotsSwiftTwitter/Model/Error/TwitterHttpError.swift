@@ -27,8 +27,8 @@ enum TwitterHttpError: Error {
 
     init?(statusCode: Int?) {
         guard let statusCode = statusCode else { return nil }
-        if 200...299 ~= statusCode { return nil }
         switch statusCode {
+        case 200...299: return nil
         case 304: self = .notFound
         case 400: self = .badRequest
         case 401: self = .unauthorized

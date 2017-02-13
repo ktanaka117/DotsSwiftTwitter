@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TimelineViewController: UIViewController {
+class TimelineViewController: UIViewController, ErrorAlertProtocol {
 
     @IBOutlet weak var tableView: UITableView!
     
@@ -25,15 +25,14 @@ class TimelineViewController: UIViewController {
         
         LoginCommunicator().login() { [weak self] loginError in
             if let loginError = loginError {
-                self?.errorHandle(loginError)
+                self?.presentAlert(for: loginError)
                 return
             }
             TwitterCommunicator().getTimeline() { [weak self] data, error in
-                if let twitterHttpError = error as? TwitterHttpError {
-                    self?.errorHandle(twitterHttpError)
+                if let error = error {
+                    self?.presentAlert(for: error)
                     return
                 }
-                if let _ = error { return }
                 
                 let tweetsParser = TweetsParser()
                 self?.tweets = try! tweetsParser.parse(json: data!)
@@ -41,26 +40,6 @@ class TimelineViewController: UIViewController {
         }
     }
 
-}
-
-extension TimelineViewController {
-    
-    func errorHandle(_ loginError: LoginError) {
-        let alertController = UIAlertController(loginError: loginError)
-        alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-        DispatchQueue.main.async {
-            self.present(alertController, animated: true, completion: nil)
-        }
-    }
-    
-    func errorHandle(_ twitterHttpError: TwitterHttpError) {
-        let alertController = UIAlertController(twitterHttpError: twitterHttpError)
-        alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-        DispatchQueue.main.async {
-            self.present(alertController, animated: true, completion: nil)
-        }
-    }
-    
 }
 
 extension TimelineViewController: UITableViewDelegate {

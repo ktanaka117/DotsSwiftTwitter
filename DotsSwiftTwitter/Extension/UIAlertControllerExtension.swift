@@ -10,7 +10,18 @@ import UIKit
 
 extension UIAlertController {
     
-    convenience init(loginError: LoginError) {
+    convenience init?(error: Error) {
+        switch error {
+        case let loginError as LoginError:
+            self.init(loginError: loginError)
+        case let twitterHttpError as TwitterHttpError:
+            self.init(twitterHttpError: twitterHttpError)
+        default:
+            return nil
+        }
+    }
+    
+    private convenience init(loginError: LoginError) {
         let message: String
         switch loginError {
         case .twitterNotAvailable:
@@ -25,8 +36,8 @@ extension UIAlertController {
 
     }
     
-    convenience init(twitterHttpError: TwitterHttpError) {
-        self.init(title: twitterHttpError.message, message: "", preferredStyle: .alert)
+    private convenience init(twitterHttpError: TwitterHttpError) {
+        self.init(title: "", message: twitterHttpError.message, preferredStyle: .alert)
     }
 
 }

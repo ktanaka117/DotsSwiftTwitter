@@ -24,6 +24,7 @@
 		29438E181E50BE84004A22EF /* JSONDecodeError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29438E171E50BE84004A22EF /* JSONDecodeError.swift */; };
 		7F6588251E5173D700AC8A1C /* TwitterHttpError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6588241E5173D700AC8A1C /* TwitterHttpError.swift */; };
 		DB0418C11E50C3DC00ACC04D /* UIAlertControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0418C01E50C3DC00ACC04D /* UIAlertControllerExtension.swift */; };
+		DB8A08D71E5209BD00361C30 /* ErrorAlertProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8A08D61E5209BD00361C30 /* ErrorAlertProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		29438E171E50BE84004A22EF /* JSONDecodeError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONDecodeError.swift; sourceTree = "<group>"; };
 		7F6588241E5173D700AC8A1C /* TwitterHttpError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterHttpError.swift; sourceTree = "<group>"; };
 		DB0418C01E50C3DC00ACC04D /* UIAlertControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIAlertControllerExtension.swift; sourceTree = "<group>"; };
+		DB8A08D61E5209BD00361C30 /* ErrorAlertProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorAlertProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +154,7 @@
 				29438E151E50BE71004A22EF /* LoginError.swift */,
 				29438E171E50BE84004A22EF /* JSONDecodeError.swift */,
 				7F6588241E5173D700AC8A1C /* TwitterHttpError.swift */,
+				DB8A08D61E5209BD00361C30 /* ErrorAlertProtocol.swift */,
 			);
 			path = Error;
 			sourceTree = "<group>";
@@ -236,6 +239,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB8A08D71E5209BD00361C30 /* ErrorAlertProtocol.swift in Sources */,
 				29438E181E50BE84004A22EF /* JSONDecodeError.swift in Sources */,
 				29438DFD1E4F5461004A22EF /* TwitterCommunicator.swift in Sources */,
 				29438E121E509981004A22EF /* JSONDecodable.swift in Sources */,
