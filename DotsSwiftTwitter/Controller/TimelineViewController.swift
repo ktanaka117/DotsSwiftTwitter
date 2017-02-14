@@ -12,7 +12,7 @@ class TimelineViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
-    var tweets: [Tweet]? = nil {
+    var tweets: [Tweet] = [] {
         didSet {
             DispatchQueue.main.async { [weak self] in
                 self?.tableView.reloadData()
@@ -77,14 +77,14 @@ extension TimelineViewController: UITableViewDelegate {
 extension TimelineViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return tweets?.count ?? 0
+        return tweets.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "TimelineTableViewCell") as! TimelineTableViewCell
         
-        cell.fill(with: tweets![indexPath.row])
+        cell.fill(with: tweets[indexPath.row])
         
         return cell
     }
