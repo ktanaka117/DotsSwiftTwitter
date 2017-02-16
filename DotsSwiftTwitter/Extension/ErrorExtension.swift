@@ -11,7 +11,7 @@ import Foundation
 extension Error {
   
   var typeMessage: String {
-    return "\type of: \(type(of: self)), error: \(self)"
+    return "type of: \(type(of: self)), error: \(self)"
   }
   
 }
