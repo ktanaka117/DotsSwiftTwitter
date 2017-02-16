@@ -13,7 +13,7 @@ protocol ErrorAlertProtocol {}
 extension ErrorAlertProtocol where Self: UIViewController {
     
     func presentAlert(for error: Error) {
-        guard let alertController = UIAlertController(error: error) else { return }
+        let alertController = UIAlertController(error: error)
         alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
         DispatchQueue.main.async {
             self.present(alertController, animated: true, completion: nil)

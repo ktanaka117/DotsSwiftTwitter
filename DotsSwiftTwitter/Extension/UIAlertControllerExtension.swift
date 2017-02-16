@@ -10,34 +10,34 @@ import UIKit
 
 extension UIAlertController {
     
-    convenience init?(error: Error) {
+    convenience init(error: Error) {
         switch error {
         case let loginError as LoginError:
             self.init(loginError: loginError)
         case let twitterHttpError as TwitterHttpError:
             self.init(twitterHttpError: twitterHttpError)
         default:
-            return nil
+            self.init(title: "Undefined Error", message: error.typeMessage, preferredStyle: .alert)
         }
     }
     
     private convenience init(loginError: LoginError) {
-        let message: String
+        let title: String
         switch loginError {
         case .twitterNotAvailable:
-            message = "Twitterが利用できません"
+            title = "Twitterが利用できません"
         case .notGranted:
-            message = "アカウントを許可してください"
+            title = "アカウントを許可してください"
         case .other(let error):
-            message = (error as NSError).localizedDescription
+            title = (error as NSError).localizedDescription
         }
-        
-        self.init(title: "ログインに失敗しました", message: message, preferredStyle: .alert)
+
+        self.init(title: title, message: loginError.typeMessage, preferredStyle: .alert)
 
     }
     
     private convenience init(twitterHttpError: TwitterHttpError) {
-        self.init(title: "", message: twitterHttpError.message, preferredStyle: .alert)
+        self.init(title: twitterHttpError.status, message: twitterHttpError.typeMessage, preferredStyle: .alert)
     }
-
+    
 }

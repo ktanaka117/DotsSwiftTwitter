@@ -67,7 +67,7 @@ enum TwitterHttpError: Error {
         }
     }
     
-    var message: String {
+    var status: String {
         return HTTPURLResponse.localizedString(forStatusCode: self.statusCode)
     }
 }
