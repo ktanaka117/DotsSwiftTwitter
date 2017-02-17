@@ -12,13 +12,7 @@ class TimelineViewController: UIViewController, ErrorAlertProtocol {
 
     @IBOutlet weak var tableView: UITableView!
     
-    var tweets: [Tweet] = [] {
-        didSet {
-            DispatchQueue.main.async { [weak self] in
-                self?.tableView.reloadData()
-            }
-        }
-    }
+    var tweets: [Tweet] = [] 
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,6 +33,10 @@ class TimelineViewController: UIViewController, ErrorAlertProtocol {
                     let tweetsParser = TweetsParser()
                     do {
                         self?.tweets = try tweetsParser.parse(json: data)
+                        
+                        DispatchQueue.main.async { _ in
+                            self?.tableView.reloadData()
+                        }
                     } catch let error {
                         print(error)
                     }
