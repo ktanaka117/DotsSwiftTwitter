@@ -11,12 +11,28 @@ import Foundation
 struct TweetsParser {
     
     func parse(json: Data) throws -> [Tweet] {
-        let jsonArray = try! JSONSerialization.jsonObject(
-            with: json,
-            options: .allowFragments
-        ) as! [Any]
+        do {
+            let json = try JSONSerialization.jsonObject(
+                with: json,
+                options: .allowFragments
+            )
+            
+            guard let jsonArray = json as? [Any] else { throw JSONSerializeError.failToSerialize }
+            
+            do {
+                return try jsonArray.map { try Tweet(json: $0) }
+            } catch JSONDecodeError.invalidFormat {
+                print("invalidFormat")
+            } catch JSONDecodeError.missingValue {
+                print("missingValue")
+            }
+            
+        } catch {
+            print("failToSerialize")
+            throw JSONSerializeError.failToSerialize
+        }
         
-        return jsonArray.map { try! Tweet(json: $0) }
+        throw JSONSerializeError.failToSerialize
     }
     
 }

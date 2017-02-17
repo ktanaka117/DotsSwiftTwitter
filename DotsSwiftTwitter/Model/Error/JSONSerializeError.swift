@@ -1,5 +1,5 @@
 //
-//  LoginError.swift
+//  JSONSerializeError.swift
 //  DotsSwiftTwitter
 //
 //  Created by 田中賢治 on 2017/02/13.
@@ -8,8 +8,6 @@
 
 import Foundation
 
-enum LoginError: Error {
-    case twitterNotAvailable
-    case notGranted
-    case other(error: Error)
+enum JSONSerializeError: Error {
+    case failToSerialize
 }

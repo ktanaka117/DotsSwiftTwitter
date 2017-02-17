@@ -31,7 +31,7 @@ struct LoginCommunicator {
             
             // 何らかのエラーがあった場合
             if let error = error {
-                handler(LoginError.other(error))
+                handler(LoginError.other(error: error))
                 return
             }
             
