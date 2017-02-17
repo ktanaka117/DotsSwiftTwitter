@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TimelineViewController: UIViewController {
+class TimelineViewController: UIViewController, ErrorAlertProtocol {
 
     @IBOutlet weak var tableView: UITableView!
     
@@ -23,14 +23,17 @@ class TimelineViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        LoginCommunicator().login() { [weak self]loginError in
+        LoginCommunicator().login() { [weak self] loginError in
             if let loginError = loginError {
-                self?.errorHandle(withLoginError: loginError)
+                self?.presentAlert(for: loginError)
                 return
             }
             
             TwitterCommunicator().getTimeline() { [weak self] data, error in
-                if let _ = error { return }
+                if let error = error {
+                    self?.presentAlert(for: error)
+                    return
+                }
                 
                 if let data = data {
                     let tweetsParser = TweetsParser()
@@ -44,18 +47,6 @@ class TimelineViewController: UIViewController {
         }
     }
 
-}
-
-extension TimelineViewController {
-    
-    func errorHandle(withLoginError loginError: LoginError) {
-        let alertController = UIAlertController(loginError: loginError)
-        alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-        DispatchQueue.main.async {
-            self.present(alertController, animated: true, completion: nil)
-        }
-    }
-    
 }
 
 extension TimelineViewController: UITableViewDelegate {
